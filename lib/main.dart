@@ -37,15 +37,20 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: IconButton(
-          icon: Icon(Icons.arrow_back),
-          onPressed: () {
-            // Handle back button press
-          },
-        ),
         title: Text(widget.title),
         centerTitle: true,
       ),
+    drawer: Drawer(
+      child: ListView(
+        children: [
+          DrawerHeader(child: Text("Menu Buttersweet Cake")),
+          ListTile(
+            leading: Icon(Icons.alarm),
+            title: Text("Menu Buttersweet Cake"),
+          )
+        ], 
+      ),
+    ),
       body: SingleChildScrollView(
         child: Column(
           children: [
